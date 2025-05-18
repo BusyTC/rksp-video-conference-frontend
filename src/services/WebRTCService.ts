@@ -9,13 +9,13 @@ const configuration = {
 
 // This function is kept for future HTTP API endpoints
 // that might be added to the backend service
-const getBackendUrl = () => {
-    if (import.meta.env.VITE_BACKEND_URL) {
-        return import.meta.env.VITE_BACKEND_URL;
-    }
-    const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
-    return `${protocol}//${window.location.hostname}:8080`;
-};
+// const getBackendUrl = () => {
+//     if (import.meta.env.VITE_BACKEND_URL) {
+//         return import.meta.env.VITE_BACKEND_URL;
+//     }
+//     const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+//     return `${protocol}//${window.location.hostname}:8080`;
+// };
 
 const getWebSocketUrl = () => {
     if (import.meta.env.VITE_BACKEND_URL) {
