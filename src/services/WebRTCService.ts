@@ -18,13 +18,14 @@ const configuration = {
 // };
 
 const getWebSocketUrl = () => {
-    if (import.meta.env.VITE_BACKEND_URL) {
-        const url = new URL(import.meta.env.VITE_BACKEND_URL);
-        const wsProtocol = url.protocol === 'https:' ? 'wss:' : 'ws:';
-        return `${wsProtocol}//${url.host}`;
-    }
-    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    return `${wsProtocol}//${window.location.hostname}:8080`;
+    return "wss://rksp-video-conference-backend.onrender.com";
+    // if (import.meta.env.VITE_BACKEND_URL) {
+    //     const url = new URL(import.meta.env.VITE_BACKEND_URL);
+    //     const wsProtocol = url.protocol === 'https:' ? 'wss:' : 'ws:';
+    //     return `${wsProtocol}//${url.host}`;
+    // }
+    // const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    // return `${wsProtocol}//${window.location.hostname}:8080`;
 };
 
 export class WebRTCService {
